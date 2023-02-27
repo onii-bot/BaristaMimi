@@ -60,13 +60,21 @@ client.on("interactionCreate", async (interaction) => {
         ])
       );
       interaction.reply({ components: [actionRowComponent], ephemeral: true });
-      interaction.message.delete();
+      try {
+        await interaction.message.delete();
+      } catch (error) {
+        console.error(`Error deleting message: ${error}`);
+      }
     } else if (interaction.customId === "no") {
       interaction.reply({
         content: "Okey have a good day master",
         ephemeral: true,
       });
-      interaction.message.delete();
+      try {
+        await interaction.message.delete();
+      } catch (error) {
+        console.error(`Error deleting message: ${error}`);
+      }
     }
   }
 });
