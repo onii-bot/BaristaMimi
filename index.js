@@ -46,6 +46,10 @@ client.on("interactionCreate", async (interaction) => {
           xpGiver(interaction.member.id, xp);
           addUser(interaction.member.id);
         }, 1000);
+      } else{
+        interaction.channel.send({
+          content: `One COFFEE PER DAY <<GO AWAY>>`, ephemeral: true
+        });
       }
     }
   } else if (interaction.isButton()) {
