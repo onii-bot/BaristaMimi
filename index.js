@@ -81,7 +81,7 @@ client.on("interactionCreate", async (interaction) => {
 
 client.on("messageCreate", async (message) => {
   // Barista channel to gm-gn here
-  if (message.content.toLowerCase() === "gm" && message.channel.id === "1068875112629141584" && await isNewUser(message.author.id)) {
+  if (message.content.toLowerCase() === "gm" && message.channel.id === "1045517138137448479" && await isNewUser(message.author.id)) {
     const row = new ActionRowBuilder().addComponents(
       new ButtonBuilder()
         .setCustomId("yes")
