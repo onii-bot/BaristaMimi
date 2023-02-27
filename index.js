@@ -47,7 +47,7 @@ client.on("interactionCreate", async (interaction) => {
           addUser(interaction.member.id);
         }, 1000);
       } else{
-        interaction.channel.send({
+        interaction.reply({
         content: "Only one COFFEE per day ;;;;",
         ephemeral: true,
       });
