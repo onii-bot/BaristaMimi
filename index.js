@@ -48,8 +48,9 @@ client.on("interactionCreate", async (interaction) => {
         }, 1000);
       } else{
         interaction.channel.send({
-          content: `One COFFEE PER DAY <<GO AWAY>>`, ephemeral: true
-        });
+        content: "Only one COFFEE per day ;;;;",
+        ephemeral: true,
+      });
       }
     }
   } else if (interaction.isButton()) {
