@@ -95,7 +95,7 @@ export async function newDay(){
 //     connec.deleteOne({"_id":"target"})
     let timeUnix = Math.floor(Date.now() / 1000);
     console.log(timeUnix)
-    let target = timeUnix + 200
+    let target = timeUnix + 86400
 //     connec.insertOne({"_id": "target", "time": target})
     await connec.updateOne(
     { _id: "userlist" },
